@@ -1,0 +1,21 @@
+<h1 class="text-3xl text-center text-green-500 my-10">All Brands !</h1>
+<div class="container w-[75%] my-4 mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-3 text-center">
+
+    @for (Brand of Brands; track $index) 
+{
+
+
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <img class=" p-8 rounded-t-lg" [src]="Brand.image" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{Brand.name}}</h5>
+            </a>
+        </div>
+    </div>
+    
+}
+</div>
+

@@ -1,0 +1,13 @@
+<div class="my-5 w-[25%] mx-auto ">
+    <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">Search : </label>
+    <input [(ngModel)]="SearchWord" placeholder="Search Products" type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  
+  </div>
+  
+  <div class="container w-[75%] my-4 mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-3">
+  
+      @for (OneProduct of AllProducts |search : SearchWord ; track $index) 
+      {
+        <app-card [CardProduct]="OneProduct"></app-card>
+      }   
+  </div>
